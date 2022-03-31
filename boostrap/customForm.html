@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>custom control </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    p {
+        color: green;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h3>custom control</h3>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck">
+            <label for="customCheck" class="custom-control-label">Check</label>
+        </div>
+        <div class="h3">custom switch /toggle switch</div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="toggaleMe">
+            <label for="toggaleMe" class="custom-control-label">toggle me</label>
+        </div>
+        <div class="h3">custom radio</div>
+        <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio" class="custom-control-input">
+            <label for="customRadio" class="custom-control-label">Custom Radio</label>
+        </div>
+        <div class="h3">custom select menu</div>
+        <select name="cars" id="" class="custom-select">
+            <!-- size
+            custom-select-lg,sm,md -->
+            <option value="">custom select menu</option>
+            <option value="odi">odi</option>
+            <option value="maruti">Maruti</option>
+            <option value="suzuki">Suzuki</option>
+        </select>
+        <dic class="h3">custom Range</dic>
+        <label for="customRange">Custom Range</label>
+        <input type="range" id="customRange" class="custom-range">
+    </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $(button).click(function () {
+                $("p").toggle();
+            })
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="h3">Form using was-validated class</div>
+    <div class="container">
+        <form action="" class="was-validated">
+            <div class="form-group">
+                <label for="uname">Username:</label>
+                <input type="text" id="uname" class="form-control" placeholder="user name" name="uname" required>
+                <div class="valid-feedback">Valid</div>
+                <div class="invalid-feedback">Please fill out this field</div>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="text" class="form-control" placeholder="password " name="pwd" required>
+                <div class="valid-feedback">Valid</div>
+                <div class="invalid-feedback">Please fill out this field</div>
+
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea class="form-control" name="" id="" cols="10" rows="5" required></textarea>
+            </div>
+            <div class="form-check-inline">
+                <label for="" class="form-check-label"></label>
+                <input type="checkbox" class="form-check-input">Option 1
+            </div>
+            <div class="form-check-inline">
+                <label for="" class="form-check-label"></label>
+                <input type="checkbox" class="form-check-input">Option 2
+            </div>
+            <br>
+            <div class="form-check">
+                <label for="" class="form-check-label">
+                    <input type="radio" name="option" class="form-check-input">male
+                </label>
+
+            </div>
+            <div class="form-check">
+                <label for="" class="form-check-label">
+                    <input type="radio" name="option" class="form-check-input">female
+                </label>
+            </div>
+            <br>
+            <div class="form-group">
+                it's selected only one. <br>
+                <label for="sel1">Select list </label>
+                <select name="select1" id="sel1" class="form-control">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+                <br>
+                <label for="sel2">Multip le list</label>
+                <select multiple class="form-control" id="sel2" name="select2">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="">Range</label>
+                <input type="range" class="form-control-range">
+                <br>
+                <label for="">File</label>
+                <input type="file" class="form-control-file border">
+            </div>
+            <br>
+            input groups prepend and append
+            <div class="input-group-mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                    <input type="email" class="form-control" placeholder="email" name="email">
+                </div>
+                <br>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Your Email" id="mail" name="email">
+                    <div class="input-group-append">
+                        <span class="input-group-text">@example.com</span>
+                    </div>
+                </div>
+                <br>
+                <button class="btn btn-primary">submit</button>
+                <br> <br>
+            </div>
+        </form>
+        <br>
+        div.
+        <br>
+
+
+    </div>
+</body>
+
+</html>

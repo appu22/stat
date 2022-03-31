@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h3>Tooltip</h3>
+        <h3> just mouse hover the content</h3>
+        <pre>deafult</pre>
+        <div></div> <a href="#" data-toggle="tooltip" title="love u too ">love to code</a>
+
+        <br>
+        <a href="#" data-toggle="tooltip" data-placement="top" title="somthing..."> Hover</a>
+        <br>
+        <a href="#" data-toggle="tooltip" data-placement="bottom" title="somthing..."> Hover</a>
+        <br>
+        <a href="#" data-toggle="tooltip" data-placement="left" title="somthing..."> Hover</a>
+        <br>
+        <a href="#" data-toggle="tooltip" data-placement="right" title="somthing..."> Hover</a>
+
+        <br>
+        <div class="h3">Toggle popover</div>
+
+        <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle
+            popover</a>
+        <br>
+        <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover 
+        " data-placement="top">Top toggle popover</a>
+        <br>
+        <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover 
+        " data-placement="bottom">bottom popover</a>
+        <br>
+        <h3>data trigger</h3>
+        to click it will be closed.
+        <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover 
+        " data-placement="bottom" data-trigger="focus">bottom popover</a>
+
+        <h3>data trigger attribute with hover</h3>
+        just hover the mouse
+        <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover 
+             " data-placement="bottom" data-trigger="hover">bottom popover</a>
+
+
+        <br><br>
+        toast
+        <div class="toast">
+            <div class="toast-header">
+                Today cimate
+            </div>
+            <div class="taost-body">
+                today temperature
+            </div>
+        </div>
+        <button type="button" class="btn btn-warning" id="toastShow"> Show</button>
+        <br>
+        taost hide and Show
+        <div class="toast " data-autohide="false">
+            <div class="toast-header">
+                <strong class="mr-auto text-primary">toast header</strong>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#toastShow").click(function () {
+                $(".toast").toast("show");
+
+            });
+        })
+    </script>
+
+</body>
+
+</html>

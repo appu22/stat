@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress bar</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+</head>
+
+<body>
+    <h2>Progress bar</h2>
+    <div class="container mt-3 ">
+        <div class="progress">
+            <div class="progress-bar" style="width: 40%;"></div>
+
+        </div><br>
+        <div class="progress " style="height: 50px;">
+            <div class="progress-bar" style="width: 60%; ">60%</div>
+        </div>
+        <br>
+        <div class="progress">
+            <div class="progress-bar" style="width: 80%;"></div>
+        </div>
+
+        <br>
+        <div class="progress ">
+            <div class="progress-bar bg-info" style="width:70%"></div>
+        </div>
+        <br>
+        <div class="progress ">
+            <div class="progress-bar bg-danger" style="width:50%"></div>
+        </div><br>
+        <div class="progress ">
+            <div class="progress-bar bg-warning" style="width:40%"></div>
+        </div><br>
+        <div class="progress ">
+            <div class="progress-bar bg-dark" style="width:30%"></div>
+        </div><br>
+        <div class="progress border">
+            <div class="progress-bar bg-white" style="width:20%"></div>
+        </div>
+        <br>
+        <h2>Striped Progress Bars</h2>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" style="width: 40%;"></div>
+        </div>
+        <br>
+        <h2>Striped Progress Bars animated</h2>
+
+        <div class="progress" style="height: 30px;">
+            <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" style="width: 50%; ">50%
+            </div>
+        </div>
+        <br>
+        <h2>Multipale Progress bars</h2>
+        <div class="progress" style="height: 30px;">
+            <div class="progress-bar bg-success " style="width:40%"> Free space </div>
+            <div class="progress-bar bg-danger" style="width: 30%;"> Danger </div>
+            <div class="progress-bar bg-warning " style="width: 30%;"> Warning </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <h3>To create spinners/loader use spinner-border class</h3>
+    <div class="container bg-">
+        <div class="spinner-border"></div>default
+        <div class="spinner-border  text-info"></div> info
+        <div class="spinner-border  text-warning"></div>warning
+        <div class="spinner-border  text-danger"></div>danger
+        <div class="spinner-border bg-white text-dark"></div>dark<br>
+        <div class="spinner-border  text-primary"></div>primary<br>
+        <div class="spinner-border  text-white bg-danger"></div>white<br>
+        <div class="spinner-border  text-muted"></div>muted<br>
+        <div class="spinner-border  text-secondary"></div>secondary<br>
+        <div class="spinner-border  text-success"></div>success<br>
+        <div class="spinner-border  text-light bg-warning"></div>light<br>
+    </div>
+    <br><br>
+    <h3>Growing spinner</h3>
+    <div class="container mt-3 " style="background-color: gray;">
+        <div class="spinner-grow text-muted mt-3 "></div>Muted
+        <div class="spinner-grow text-info "></div>info
+        <div class="spinner-grow text-primary"></div>primary
+        <div class="spinner-grow "></div>grow default
+        <div class="spinner-grow text-danger"></div>danger
+        <div class="spinner-grow text-white"></div>white
+        <div class="spinner-grow text-dark"></div>dark
+        <div class="spinner-grow text-secondary"></div>secondary
+        <div class="spinner-grow text-light"></div>light
+        <div class="spinner-grow text-warning"></div>warning
+        <br><br>
+    </div>
+    <h3>spinner size</h3>
+    <div class="container">
+        <div class="spinner-border spinner-border-sm"></div>
+        <div class="spinner-grow spinner-grow-sm"></div>
+    </div>
+    <br><br>
+    <h3>spinner button</h3>
+    <button class="btn btn-primary"><span class="spinner-border spinner-border-sm"></span> </button>
+    <button class="btn btn-primary"><span class="spinner-border spinner-border-sm"></span>loading.. </button>
+    <button class="btn btn-primary" disabled><span class="spinner-border spinner-border-sm"></span>loading.. </button>
+    <button class="btn btn-primary" disabled><span class="spinner-grow spinner-grow-sm"></span>loading.. </button>
+    <br><br>
+    <h3>Pagination</h3>
+    <div class="container">
+        <ul class="pagination ">
+            <!-- pagination size-- 
+                class="" pagination " pagination-lg   -->
+            <li class="page-item"><a class="page-link" href="#" target="_blank">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="listGroups.htm" target="_blank">1</a></li>
+            <li class="page-item active"><a class="page-link" href="listGroups.htm" target="_blank">2</a></li>
+            <li class="page-item"><a class="page-link" href="listGroups.htm" target="_blank">3</a></li>
+            <li class="page-item"><a class="page-link" href="listGroups.htm" target="_blank">4</a></li>
+            <li class="page-item disabled"><a class="page-link" href="listGroups.htm" target="_blank">Next</a></li>
+        </ul>
+        <h3>Pagination alignment</h3>
+        <!-- default left aligned -->
+        <ul class="pagination " style="margin: 20px 0;">
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+        </ul>
+        <ul class="pagination justify-content-center" style="margin: 20px 0;">
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+        </ul>
+        <ul class="pagination justify-content-end" style="margin: 20px 0;">
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+        </ul>
+        <br><br>
+        <h3>breadcrumbs</h3>
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"> <a href="#">about</a></li>
+            <li class="breadcrumb-item"> <a href="#">photos</a></li>
+            <li class="breadcrumb-item "> <a href="#">service</a></li>
+            <li class="breadcrumb-item active"> acitve</li>
+        </ul>
+    </div>
+
+    <br><br>
+</body>
+
+</html>

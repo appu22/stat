@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    #nav {
+        color: white;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p>Basic nav</p>
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link">link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link disabled">link 1</a>
+            </li>
+        </ul>
+        <br><br>justify-content-center
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a href="#" class="nav-link">link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link disabled">link 1</a>
+            </li>
+        </ul>
+        <br> <br>justify-content-end
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a href="#" class="nav-link">link2 </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">link 3 </a>
+            </li>
+        </ul>
+        <br><br>
+        vertical
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a href="#" class="nav-link">link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">link 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link disabled">link 1</a>
+            </li>
+        </ul>
+        <br>tabs
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="#" class="nav-link active">Active</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link ">Active 2</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link ">Active 3</a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link disabled">aa</a>
+            </li>
+        </ul>
+        <br>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a href="#" class="nav-link active">link 1 </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link ">link 1 </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link ">link 1 </a>
+            </li>
+        </ul>
+        <br> Toggleable Tabs
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a href="#home" data-toggle="tab" class="nav-link active ">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#menu1" data-toggle="tab" class="nav-link  ">menu1</a>
+            </li>
+            <li class="nav-item">
+                <a href="#menu2" data-toggle="tab" class="nav-link  ">menu2</a>
+            </li>
+        </ul>
+        <!-- tab panes  -->
+        <div class="tab-content">
+            <div class="tab-pane container active" id="home">
+                <h3>hii</h3>
+            </div>
+            <div class="tab-fane container fade" id="menu1">
+                <h3>menu1</h3>
+            </div>
+            <div class="tab-pane container  fade " id="menu2">
+                <h3>menu3</h3>
+            </div>
+            <!-- <div id="menu1" class="container tab-pane fade"><br> -->
+        </div>
+
+        <br>
+        Toggleable /dynamic pills
+        <ul class="nav nav-pills " role="tablist">
+            <li class="nav-item">
+                <a href="#home" class="nav-link active" data-toggle="pill">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#about" data-toggle="pill">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#service" class="nav-link" data-toggle="pill">service</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane container active " id="home">
+                <h3>Home</h3>
+            </div>
+            <div class="tab-pane container fade" id="about">
+                <h3>About</h3>
+            </div>
+            <div class="tab-pane container fade " id="service">
+                <h3>Service</h3>
+            </div>
+        </div>
+    </div>
+    <br> <br> Navbar-logo
+
+    <div class="container">
+        <nav class="navbar navbar-expand-sm " style="background-color: #1f7099;">
+            <a href="#" class="navbar-brand">
+                <img src="https://predictiveanalytics.in/wp-content/uploads/2017/01/stat_logo.png" alt="stat_logo"
+                    style="width:50px; height: 50px;">
+            </a>
+            <!-- links -->
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="nav">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="nav">STATCRAFT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="nav">STATCRAFT-P</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="nav">Pricing</a>
+                </li>
+            </ul>
+
+        </nav>
+        <br>
+        <h2>navbar inside form</h2>
+        <nav class="navbar navbar-expand-sm bg-dark">
+            <form action="" class="form-inline">
+                <input type="text" class="form-contorl mr-sm-2" placeholder="search">
+                <button class="btn btn-success" type="button">Search</button>
+            </form>
+        </nav>
+        <br><br>
+        <nav class="navbar navbar-expand-sm bg-dark">
+            <form action="" class="form-inline">
+                <input type="text" class="form-contorl mr-sm-2" placeholder="search">
+                <button class="btn btn-success" type="button">Search</button>
+            </form>
+        </nav>
+
+    </div>
+    <br>
+
+</body>
+
+</html>
