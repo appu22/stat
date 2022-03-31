@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stop methods ()</title>
+</head>
+
+<style>
+    #box {
+        height: 150px;
+        width: 200px;
+        padding: 10px;
+        background-color: aquamarine;
+        border: 1px solid #000;
+        position: relative;
+
+    }
+
+    #test {
+        background-color: pink;
+    }
+
+    .btn {
+
+        background: black;
+        color: aliceblue;
+        padding: 10px 10px 10px 10px;
+    }
+
+
+
+    #animate:hover {
+        color: yellow;
+
+    }
+
+    .red {
+        color: red;
+    }
+</style>
+
+<body>
+    <h2>stop methods </h2>
+
+    <div id="box" class="test">
+        <h2 class="test"> stop methods </h2>
+        <p>R and Python are becoming de-facto standards in data analytics.
+        </p>
+    </div>
+
+    <br><br>
+
+    <div id="buttons">
+        <button type="button" id="animate" class="btn">animate()</button>
+        <button type="button" id="stopBtn" class="btn">stop()</button>
+    </div>
+    <script src="jquery.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#animate").click(function () {
+
+                $("#box").animate({ left: '150px' });
+                $("#box").animate({ top: '100px' });
+                $("#box").animate({ left: '350px', fontSize: '15px' }, 3000, function () {
+                    console.log("hii i am call back function ");
+                });
+            })
+            $("#stopBtn").click(function () {
+                $("#box").css("background-color","red").stop();
+            })
+
+        });
+    </script>
+</body>
+
+</html>

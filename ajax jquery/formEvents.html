@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events </title>
+</head>
+<style>
+    body {
+
+        color: brown;
+    }
+
+    .box {
+
+        /* justify-content: space-between; */
+
+        /* background-color: chartreuse; */
+        /* padding: 49px 62px 64px 82px; */
+        margin-left: 500px;
+        margin-top: 100px;
+        padding: 60px;
+        margin-right: 40%;
+
+    }
+</style>
+
+<body>
+
+    <h2>Form Events</h2>
+
+    <form action="" class="box" id="form">
+        <label for="name">Name : </label>
+        <input type="text" name="nm" id="name">
+        <br>
+        <label for="class">Class </label>
+        <input type="text" name="cls" id="class">
+        <br>
+        <br>
+        <label>Country</label>
+
+        <select name="" id="country">
+            <option>--select country---</option>
+            <option value="india">India</option>
+            <option value="america">America</option>
+            <option value="uk">UK</option>
+        </select>
+
+        <div id="test" style="border:1px solid black;margin-top: 20px;">
+            </style>
+        </div>
+        <input type="submit" name="" id="">
+    </form>
+
+    <script src="jquery.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            // $('#name, #class,#country').focus(function () {
+            //     $(this).css("background-color", "orange");
+            // });
+
+            // $('#name,#class,#country').blur(function () {
+            //     $(this).css("background-color", "");
+            // });
+
+            // $('#country').change(function () {
+
+            //     let a = $(this).val();
+            //     $('#test').html(a);
+            // });
+
+            // $("#name,#class").select(function () {
+            //     $(this).css("background-color", "yellow");
+            // });
+
+            // $('#form').submit(function () {
+            //     alert("form submited..");
+            // });
+
+            // $("#class").focus(function () {
+            //     $(this).css("background-color", "orange");
+            // });
+
+
+            //get the value 
+            // print in console
+
+            $("#form").submit(function () {
+                var nme = $("#name").val();
+                console.log(nme);
+                alert("hello : " + nme);
+            });
+        });
+    </script>
+</body>
+
+</html>

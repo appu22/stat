@@ -1,0 +1,90 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.done {
+    color: green;
+    text-decoration: line-through;
+}
+
+.container {
+    background: #f7f7f7;
+    width: 360px;
+    max-height: 500px;
+    margin: 100px auto;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 3);
+}
+
+h1 {
+    text-align: center;
+    background: #2980b9;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-weight: normal;
+    font-size: 25px;
+    margin: 0;
+}
+
+input {
+    background: #f7f7f7;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
+    color: #2980b9;
+    font-size: 20px;
+}
+
+input:focus {
+    border: 3px solid #2980b9;
+    outline: none;
+    background: white;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background: white;
+    height: 40px;
+    line-height: 40px;
+    color: #e47373;
+    text-align: center;
+}
+
+li:nth-child(2n) {
+    background: #f7f7f7;
+}
+
+.task {
+    max-height: 400px;
+    overflow: auto;
+    /* //scroll bar */
+}
+
+.delete {
+    background: #f82811;
+    /* color: white; */
+    height: 40px;
+    text-align: center;
+    width: 0px;
+    float: left;
+    display: inline-block;
+    opacity: 0;
+    color: white;
+    transition: 0.5s linear;
+}
+
+li:hover span {
+    width: 40px;
+    opacity: 1.0;
+}
+
+#pulse {
+    float: right;
+    margin: 0;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event target</title>
+</head>
+
+<style>
+    body {
+        background-color: antiquewhite;
+    }
+
+    #box {
+        height: 200px;
+        width: 400px;
+        border: 2px solid #000;
+        margin: 10%;
+
+    }
+</style>
+
+<body>
+    <div id="box">
+        <h2>target</h2>
+        <p>The target property can be the element that registered for the event or a descendant of it. It is often
+            useful to
+            compare event.target to this in order to determine if the event is being handled due to event bubbling.
+            This property is very useful in event delegation, when events bubble.</p>
+        <h3>hiiii</h3>
+        <span>hello</span>
+    </div>
+    <h4 id="tar"></h4>
+    <br> <br>
+    <h6></h6>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //     $("#tar").on("clicked", event.target.nodeName)
+            // });
+            $("#box").on("click", function () {
+                $('h4').html('Target Element : ' + event.target.nodeName);
+                $('h6').html('Target Element : ' + event.target.innerHTML);
+
+            });
+            // $('tar').html("clicked: ", event.target);
+        });
+    </script>
+</body>
+
+</html>

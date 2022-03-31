@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        background-color: aquamarine;
+        margin: 50px 30%;
+        padding: 10px 10px 10px 10px;
+    }
+
+    #buttons {
+        margin: 50px 30%;
+
+    }
+
+    #wrap,
+    #unwrap {
+        padding: 10px 10px 10px 10px;
+
+    }
+
+    #test {
+        background-color: pink;
+    }
+</style>
+
+<body>
+
+    <div id="box" class="test abc">
+
+        <h2>WrapAll() and wrapInner()</h2>
+
+        <p>R and Python are becoming de-facto standards in data analytics.
+            However both R and Python are primarily programming languages,
+            requiring coding skills to work with. We have been noticing that
+            when it comes to data analysis, </p>
+        <p>this often creates bottlenecks
+            in adoption and productivity. We therefore decided to create an
+            unique software environment that will allow Data Scientists to
+            access the power of R and Python through rich and user-friendly
+            GUI.</p>
+
+    </div>
+    <div id="buttons">
+        <button type="button" id="wrap">Wrap</button>
+        <button type="button" id="unwrap">UnWarp</button>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#wrap").click(function () {
+
+                $("#box p").wrap("<h2 id='test'></h2>");
+            });
+
+            $("#unwrap").click(function () {
+
+                $("#box p").unwrap();
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

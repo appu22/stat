@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>key events </title>
+</head>
+
+<body>
+    <h1>statcraft</h1>
+
+    <h3>press any key color will be changing using 'keypress()' method</h3>
+    <br>
+    <h2>press any key color will be changing using "keyup()" method ...... </h2>
+    <br>
+    <h3>press arrows key changing color using "keydown()" method</h3>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('body').keypress(function () {
+                // console.log(e);
+                //this will work after pressing any      key 
+                $(this).css("background-color", "blue");
+            });
+            $("body").keyup(function () {
+                // 
+                $("body").css("background-color", "red");
+            });
+
+            $("body").keydown(function () {
+                // it work only for arrow keys 
+                $("body").css("background-color", "skyblue");
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+
+</html>

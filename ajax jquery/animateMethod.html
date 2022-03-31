@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate methods ()</title>
+</head>
+
+<style>
+    #box {
+        height: 150px;
+        width: 200px;
+        padding: 10px;
+        background-color: aquamarine;
+        border: 1px solid #000;
+        position: relative;
+
+    }
+
+    #buttons {
+        /* margin-left: 35%; */
+        /* margin: 50px 30%; */
+    }
+
+    #test {
+        background-color: pink;
+    }
+
+    #animate {
+
+        background: black;
+        color: aliceblue;
+        padding: 10px 10px 10px 10px;
+    }
+
+
+
+    #animate:hover {
+        color: yellow;
+
+    }
+
+    .red {
+        color: red;
+    }
+</style>
+
+<body>
+    <h2>animate methods </h2>
+    <div id="box" class="test">
+
+        <h2 class="test"> animate methods </h2>
+        <p>R and Python are becoming de-facto standards in data analytics.
+
+        </p>
+
+    </div>
+    <br><br>
+
+    <div id="buttons">
+        <button type="button" id="animate">animate()</button>
+    </div>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#animate").click(function () {
+                // $("#box").animate({
+
+                //     left: '350px',
+                //     // width: '+=100px',
+                //     width: 'toggle',
+                //     fontSize: '20px',
+                //     borderWidth: '5px'
+                // });
+                $("#box").animate({ left: '150px' });
+                $("#box").animate({ top: '100px' });
+                $("#box").animate({ left: '350px', fontSize: '15px' }, 3000, function () {
+                    console.log("hii i am call back function ");
+                });
+                $("#box").animate({ top: '150px' });
+
+            })
+
+        });
+    </script>
+</body>
+
+</html>

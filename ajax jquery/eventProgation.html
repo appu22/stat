@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event progation </title>
+</head>
+<style>
+    #box {
+        background-color: antiquewhite;
+        padding: 10px 10px 10px 20px;
+        width: 400px;
+        height: 200px;
+        margin-left: 35%;
+    }
+</style>
+
+<body>
+    <h2>event progation</h2>
+    <div id="box">
+        <h3>test box</h3>
+        <p>To avoid the event bubbling , we have to use event.progationStopped()</p>
+        <br> <br>
+        <button class="button">submit</button>
+    </div>
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $("h3").click(function (e) {
+                e.stopPropagation();//top stop the div alert 
+                // var a = e.isPropagationStopped();
+                alert("this h3 tag  \n isPropagationStopped  : " + e.isPropagationStopped());
+            });
+            $("div").click(function () {
+                alert("this is div tag");
+            })
+            $("p").click(function () {
+                alert("this is p tag");
+            })
+            $(".button").click(function () {
+                alert("this is button");
+            });
+        });
+    </script>
+</body>
+
+</html>

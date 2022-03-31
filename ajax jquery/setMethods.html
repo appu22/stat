@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery get methods</title>
+</head>
+<style>
+    #box {
+        background-color: orange;
+        margin-top: 10%;
+        margin-left: 30%;
+        margin-right: 40%;
+        padding: 1px 20px 20px 25px;
+    }
+
+    h2 {
+        text-decoration-line: underline;
+
+    }
+
+    #red {
+        color: red;
+    }
+</style>
+
+<body>
+
+    <div id="box" class="test abc">
+        <h2>Test Box</h2>
+        <p>how to get all html code in console
+            just we have to create one variable and store entre code that variable html() <span>jfhsdfjkshdfhdf</span>
+        </p>
+        <button type="button" id="clickbutton">click to change test box </button>
+        <br> <br>
+        <form action="">
+            <label for="">Name : </label>
+            <input type="text" id="nm"> <br><br>
+            <label for="">Class : </label>
+            <input type="text" id="cls">
+        </form>
+
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $("#clickbutton").click(function () {
+                //text only added 
+                $("#box h2").text("appu code zone");
+                // $("#box p").text("Software developer ");
+
+                //added b tag with text
+                $("#box p").html("Software <b> developer </b>");
+
+                //passing two parameters  one select class or id , another one is value.
+                $("#box h2").attr("id", "red");
+            });
+
+
+
+            $("#nm").val("appu");
+            $("#cls").val("Badiger");
+        });
+    </script>
+</body>
+
+</html>

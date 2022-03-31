@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing Methods</title>
+</head>
+
+<body>
+    <h1>jquery ancestor methods </h1>
+    <div id="main-outer">
+        <h2>main outer </h2>
+        <div class="outer">
+            <div class="inner">
+                <h2 id="child-head">inner</h2>
+                <div>A</div>
+                <div>B</div>
+                <div class="child-c">C</div>
+                <div>D</div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("child-c").parent().css("background-coloer", "red");
+        });
+    </script>
+</body>
+
+</html>

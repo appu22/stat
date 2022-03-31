@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide methods ()</title>
+</head>
+
+<style>
+    #box {
+        /* position: fixed; */
+        background-color: aquamarine;
+        /* margin: 10%; */
+        padding-right: 300px;
+        padding-top: 5px;
+        border: 1px solid black;
+
+    }
+
+    #buttons {
+        margin-left: 35%;
+        /* margin: 50px 30%; */
+    }
+
+    #test {
+        background-color: pink;
+    }
+
+
+    #slideDown,
+    #slideUp,
+    #slideToggle {
+
+        background: black;
+        color: aliceblue;
+        padding: 10px 10px 10px 10px;
+    }
+
+
+    #slideDown:hover,
+    #slideToggle:hover,
+    #slideUp:hover {
+        color: yellow;
+
+    }
+
+    .red {
+        color: red;
+    }
+</style>
+
+<body>
+    <h2>slide methods </h2>
+    <div id="box" class="test">
+
+        <h2 class="test"> slide methods </h2>
+        <p>R and Python are becoming de-facto standards in data analytics.
+            However both R and Python are primarily programming languages,
+            requiring coding skills to work with. We have been noticing that
+            when it comes to data analysis. We
+        </p>
+
+    </div>
+    <br><br>
+
+    <div id="buttons">
+        <button type="button" id="slideDown">slideDown()</button>
+        <button type="button" id="slideUp">slideUp()</button>
+        <button type="button" id="slideToggle">slideToggle()</button>
+    </div>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            //these methods are using animation purpose 
+            //same as hide and show 
+
+            $("#slideDown").click(function () {
+                //pre-defined methods slow and fast
+                //you can give milliseonds also 
+
+                // $("#box").slideDown();
+                $("#box").slideDown(3000);
+            });
+            //
+            $("#slideUp").click(function () {
+                //pre-defined methods slow and fast
+                // $("#box").slideUp();
+                $("#box").slideUp("slow");
+
+            });
+
+            //it work both slideUp and slideDown
+            $("#slideToggle").click(function () {
+                //after completed the task callback function excuted.
+                $("#box").slideToggle(2000,function(){
+                    
+                });
+            });
+
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

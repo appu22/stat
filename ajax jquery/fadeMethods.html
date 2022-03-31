@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade methods ()</title>
+</head>
+
+<style>
+    #box {
+        /* position: fixed; */
+        background-color: aquamarine;
+        /* margin: 10%; */
+        padding-right: 300px;
+        padding-top: 5px;
+        border: 1px solid black;
+
+    }
+
+    #buttons {
+        margin-left: 35%;
+        /* margin: 50px 30%; */
+    }
+
+    #test {
+        background-color: pink;
+    }
+
+    #fadeOut,
+    #fadeIn,
+    #fadetoggle,
+    #fadeTo {
+
+        background: black;
+        color: aliceblue;
+        padding: 10px 10px 10px 10px;
+    }
+
+    #fadeOut:hover,
+    #fadeIn:hover,
+    #fadetoggle:hover,
+    #fadeTo:hover {
+        color: yellow;
+
+    }
+
+    .red {
+        color: red;
+    }
+</style>
+
+<body>
+    <h2>fade methods </h2>
+    <div id="box" class="test">
+
+        <h2 class="test"> Horizontal scrool () and scrollTOp()</h2>
+
+        <p>R and Python are becoming de-facto standards in data analytics.
+            However both R and Python are primarily programming languages,
+            requiring coding skills to work with. We have been noticing that
+            when it comes to data analysis. We
+        </p>
+
+    </div>
+    <br><br>
+
+    <div id="buttons">
+        <button type="button" id="fadeOut">fadeOut()</button>
+        <button type="button" id="fadeIn">fadeIn()</button>
+        <button type="button" id="fadetoggle">fadeToggle()</button>
+        <button type="button" id="fadeTo">fadeTo())</button>
+    </div>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //it is working same as hide()
+            $("#fadeOut").click(function () {
+                // you can give seonds as
+                //you can give slow fast 
+                $("#box").fadeOut(1000);
+            });
+
+            // it is working same as show() method
+            $("#fadeIn").click(function () {
+                $("#box").fadeIn(2000);
+            });
+
+            // it is working both fadeIn and fadeOut
+            $("#fadetoggle").click(function () {
+                $("#box").fadeToggle(3000);
+            });
+
+            //fadeTo method will accept 3 parameters 
+            //one is speed 
+            //seond is opacity 
+            //third is callback -- it  is option 
+            $("#fadeTo").click(function () {
+                $("#box").fadeTo(3000, 0.2);
+            });
+
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

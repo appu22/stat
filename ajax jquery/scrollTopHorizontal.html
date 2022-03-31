@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrolltop scrollLeft</title>
+</head>
+
+<style>
+    #box {
+        position: fixed;
+        background-color: aquamarine;
+        margin: 100px;
+        padding-right: 300px;
+        padding-top: 50px;
+        /* padding: 330px 30px; */
+        border: 1px solid black;
+
+    }
+
+    #buttons {
+        margin-left: 45%;
+        /* margin: 50px 30%; */
+    }
+
+    #offset,
+    #position {
+
+        padding: 10px 10px 10px 10px;
+
+    }
+
+    #test {
+        background-color: pink;
+    }
+
+    .red {
+        color: red;
+    }
+</style>
+
+<body style="width: 1000px;">
+    <h2>scrolltop scrollLeft</h2>
+    <div id="box" class="test abc">
+    </div>
+    <div id="buttons">
+        <button type="button" id="scrollTop">scrolltop</button>
+        <button type="button" id="scrollLeft">scrollLeft</button>
+    </div>
+
+    <h2>Horizontal scrool () and scrollTOp()</h2>
+
+    <p>R and Python are becoming de-facto standards in data analytics.
+        However both R and Python are primarily programming languages,
+        requiring coding skills to work with. We have been noticing that
+        when it comes to data analysis, </p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+    <p>this often creates bottlenecks
+        in adoption and productivity. We therefore decided to create an
+        unique software environment that will allow Data Scientists to
+        access the power of R and Python through rich and user-friendly
+        GUI.</p>
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $(window).scroll(function () {
+
+                $("#box").html("");
+                $("#box").append("Top : " + ($(window).scrollTop()));
+                $("#box").append("Left : " + ($(window).scrollLeft()));
+            });
+            $("#scrollTop").click(function () {
+                $(window).scrollTop(200);
+            });
+            $("#scrollLeft").click(function () {
+                $(window).scrollLeft(50);
+            });
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

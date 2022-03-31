@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreventDefault</title>
+</head>
+<style>
+    .box {
+        height: 250px;
+        width: 250px;
+        margin: 29px 49px 67px 519px;
+        padding: 24px 18px 16px 22px;
+        background-color: antiquewhite;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <a href="https://www.statcraft.in/" id="statcraft">click here </a><span>using prevent Default it is stop the
+            default event </span><br><br>
+        <br>
+        Without using preventDefault <br>
+        <a href="https://www.statcraft.in/">click here </a>
+    </div>
+    <b><br>
+        <h2></h2>
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $("#statcraft").click(function (event) {
+                    event.preventDefault();
+
+                    var a = event.isDefaultPrevented();
+                    console.log("is used default prevented ?? " + a);
+                    $('h2').html("is used default  prevented ?? " + a)
+                });
+
+            });
+        </script>
+</body>
+
+</html>

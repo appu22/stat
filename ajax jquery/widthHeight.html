@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>height and width </title>
+</head>
+<style>
+    #box {
+        background-color: aquamarine;
+        margin: 50px 30%;
+        padding: 30px 32px 30px 30px;
+        border: 10px solid black;
+    }
+
+    #buttons {
+        margin: 50px 30%;
+
+    }
+
+    #wrap,
+    #unwrap {
+        padding: 10px 10px 10px 10px;
+
+    }
+
+    #test {
+        background-color: pink;
+    }
+
+    .red {
+        color: red;
+    }
+</style>
+
+<body>
+
+    <div id="box" class="test abc">
+
+        <h2>height () and width()</h2>
+
+        <p>R and Python are becoming de-facto standards in data analytics.
+            However both R and Python are primarily programming languages,
+            requiring coding skills to work with. We have been noticing that
+            when it comes to data analysis, </p>
+        <p>this often creates bottlenecks
+            in adoption and productivity. We therefore decided to create an
+            unique software environment that will allow Data Scientists to
+            access the power of R and Python through rich and user-friendly
+            GUI.</p>
+
+    </div>
+    <div id="buttons">
+        <button type="button" id="width">Width</button>
+        <button type="button" id="height">Height</button>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('#width').click(function () {
+                //set width
+                $("#box").width("500px");
+
+                console.clear()
+                console.log("Width : " + $("#box").width());
+                console.log("innerWidth : " + $("#box").innerWidth());
+                console.log("outerWidth : " + $("#box").outerWidth());
+                console.log("outerWidth : " + $("#box").outerWidth(true));
+            });
+
+            $('#height').click(function () {
+                //set height
+                $("#box").height("500px");
+
+
+                console.clear()
+                console.log("heigth : " + $("#box").height());
+                console.log("innerheigth : " + $("#box").innerHeight());
+                console.log("outerheigth : " + $("#box").outerHeight());
+                console.log("outerheigth : " + $("#box").outerHeight(true));
+            });
+        });
+
+    </script>
+</body>
+
+</html>
+
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Type</title>
+</head>
+<style>
+    #box {
+        margin-left: 20%;
+
+        height: 200px;
+        width: 200px;
+        background-color: aqua;
+    }h3{
+        color: red;
+    }
+</style>
+
+<body>
+    <h2>Event Type </h2>
+    <div id="box"></div>
+
+    <h3></h3>
+    <script src="jquery.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $("#box").on('click dbclick mouseover mouseout', function (event) {
+
+                $("h3").html("Event : " + event.type)
+            });
+
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>

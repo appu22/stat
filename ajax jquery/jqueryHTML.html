@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        background-color: aquamarine;
+        border: 2px solid #000;
+    }
+</style>
+
+<body>
+    <div id="box" class="test">
+        <h2>Test Box</h2>
+        <p>dshfssssssssssssssssfhdkfj
+            hjkdfasdddddddddddd
+            sfdhkdsssssssssssssssssssssj
+        </p>
+    </div>
+    <ul id="list">
+        <li>orange</li>
+        <li class="test">Banana</li>
+        <li>grapes</li>
+        <li class="test">Apple</li>
+        <li>Guava</li>
+    </ul>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $("#list").css("color", "red").css("border","2px solid black")
+            // $("*").css("border", "2px solid red")
+            // $(".test").css("border", "2px solid black");
+
+            // less than and  greater than
+            // $("ul li:gt(2)").css("border", "2px solid red")
+            // $("ul li:lt(2)").css("border", "2px solid black");
+
+            $("#box").click(function () {
+                $("#box").css("background-color", "red")
+
+                // var a = $("#box").html();
+
+                // console.log(a);
+
+            })
+            $("#box").dblclick(function () {
+                $("#box").css("background-color", "orange")
+            })
+
+            $("#box").contextmenu(function () {
+
+                $("#box").css("background-color", "blue");
+            })
+
+            $("#box").mouseenter(function () {
+                $("#box").css("background-color", "green");
+            });
+            // $("#box").mouseout(function () {
+            //     $("#box").css("background-color", "purple");
+            // });
+            $("#box").mouseleave(function () {
+                $("#box").css("background-color", "tan");
+            });
+
+            $()
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery get methods</title>
+</head>
+
+<body>
+
+    <div id="box" class="test abc">
+        <h2>Test Box</h2>
+        <p>how to get all html code in console
+            just we have to create one variable and store entre code that variable html() <span>jfhsdfjkshdfhdf</span>
+        </p>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            //with tag you can view 
+            var a = $('#box p').html();
+            console.log(a);
+
+
+            //text only view 
+            var a = $('#box').text();
+            console.log(a);
+
+            // only attributes can view 
+            var a = $('#box').attr('class');
+            console.log(a);
+
+            
+
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

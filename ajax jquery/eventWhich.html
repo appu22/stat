@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Type</title>
+</head>
+<style>
+    #box {
+        margin-left: 20%;
+
+        height: 200px;
+        width: 200px;
+        background-color: aqua;
+    }
+
+    h3 {
+        color: red;
+    }
+</style>
+
+<body>
+    <h2>Event Type </h2>
+    <br>
+    <div id="box"></div>
+    <br>
+    <input type="text" id="inputbox">
+    <h3></h3>
+    <br>
+    <pre>event.which --- press any key it is showing ascii values.
+        press mouse (right left center) in the above box it is showing 
+    </pre>
+
+
+    <script src="jquery.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $("#box").on('mouseover mouseout mousedown', function (event) {
+
+                $("h3").html(event.which)
+            });
+            $("#inputbox").on("keydown", function () {
+                $('h3').html(event.type + " : " + event.which);
+            })
+        });
+
+
+
+    </script>
+</body>
+
+</html>

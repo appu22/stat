@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hasclass</title>
+</head>
+
+<style>
+    #box {
+        /* position: fixed; */
+        background-color: aquamarine;
+        margin: 10%;
+        padding-right: 300px;
+        padding-top: 5px;
+        border: 1px solid black;
+
+    }
+
+    #buttons {
+        margin-left: 35%;
+        /* margin: 50px 30%; */
+    }
+
+    #test {
+        background-color: pink;
+    }
+
+    .red {
+        color: red;
+    }
+</style>
+
+<body>
+    <h2>Has Class </h2>
+    <div id="box" class="test">
+
+        <h2 class="test"> Horizontal scrool () and scrollTOp()</h2>
+
+        <p>R and Python are becoming de-facto standards in data analytics.
+            However both R and Python are primarily programming languages,
+            requiring coding skills to work with. We have been noticing that
+            when it comes to data analysis, </p>
+        <p>this often creates bottlenecks
+            in adoption and productivity. We therefore decided to create an
+            unique software environment that will allow Data Scientists to
+            access the power of R and Python through rich and user-friendly
+            GUI.</p>
+    </div>
+
+    <div id="buttons">
+        <button type="button" id="hasclass">HasClass()</button>
+    </div>
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //if class is found it will its true otherwise it is false
+            $("#hasclass").click(function () {
+                // console.log($("#box").hasClass("test"));
+
+                var a = $("#box h2").hasClass("test");
+                if (a == true) {
+                    console.log("Yes");
+                } else {
+                    console.log("No ");
+                }
+
+            });
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

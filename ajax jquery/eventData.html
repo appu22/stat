@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event data </title>
+</head>
+<style>
+    .box {
+        margin-top: 100px;
+        background-color: antiquewhite;
+        height: 400px;
+        width: 400px;
+        margin-left: 400px;
+        padding: 10px 10px 10px 10px;
+    }
+</style>
+
+<body>
+    <h2>jquery event.data </h2>
+    <div class="box">
+
+        <p>this paragraph one </p> <br> <br>
+        <p>this paragraph second</p> <br> <br>
+        <p> this paragraph third</p>
+
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $("p").each(function (i) {
+                    $(this).on("click",{val:i},function(e){
+                        alert(event.data);
+                    });
+                });
+            });
+
+        </script>
+    </div>
+
+</body>
+
+</html>

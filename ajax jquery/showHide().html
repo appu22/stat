@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide show()</title>
+</head>
+
+<style>
+    #box {
+        /* position: fixed; */
+        background-color: aquamarine;
+        /* margin: 10%; */
+        padding-right: 300px;
+        padding-top: 5px;
+        border: 1px solid black;
+
+    }
+
+    #buttons {
+        margin-left: 35%;
+        /* margin: 50px 30%; */
+    }
+
+    #test {
+        background-color: pink;
+    }
+
+    #hide,
+    #show,
+    #toggle {
+
+        background: black;
+        color: aliceblue;
+        padding: 10px 10px 10px 10px;
+    }
+
+    #hide:hover,
+    #show:hover,
+    #toggle:hover {
+        color: yellow;
+
+    }
+
+    .red {
+        color: red;
+    }
+</style>
+
+<body>
+    <h2>hide show()</h2>
+    <div id="box" class="test">
+
+        <h2 class="test"> Horizontal scrool () and scrollTOp()</h2>
+
+        <p>R and Python are becoming de-facto standards in data analytics.
+            However both R and Python are primarily programming languages,
+            requiring coding skills to work with. We have been noticing that
+            when it comes to data analysis, </p>
+
+    </div>
+    <br><br>
+
+    <div id="buttons">
+        <button type="button" id="hide">Hide()</button>
+        <button type="button" id="show">Show()</button>
+        <button type="button" id="toggle">Toggle()</button>
+    </div>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            //hide() method it will hide code or content
+            $("#hide").click(function () {
+
+                //hide accept parameters one is you can miliseonds 
+                //other one is -- [give  slow or fast]
+
+                //hide accept callback function also ..
+                //but  it is optional
+                $("#box").hide(3000, function () {
+                    console.log("Now it is hidden");
+                });
+            });
+            $("#show").click(function () {
+
+                // $("#box").show("fast");
+                $("#box").show(1000, function () {
+                    console.log("Now it is show");
+                });
+
+            });
+            $("#toggle").click(function () {
+                //it will work both hide and show   
+                $("#box").toggle(1000, function () {
+                    console.log("toggle here .........")
+                });
+
+            });
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

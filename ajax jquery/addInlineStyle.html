@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #box {
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    .first {
+        background: tan;
+
+    }
+
+    .second {
+        background: pink;
+    }
+</style>
+
+<body>
+
+    <h1>jQuery Methods</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Software Developer <span>appayya badiger</span></p>
+    </div>
+    <br>
+    <button id="addStyle">Add Style</button>
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#addStyle").click(function () {
+
+                // $("#box").css("background-color", "red");
+
+                //You can use same as cssi
+                $("#box").css({ "background": "pink", "color": "red" });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
