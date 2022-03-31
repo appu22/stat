@@ -1,0 +1,14 @@
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaPostfixProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaChainProposalCategory\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.spss.departmentservice.entity.Department"><rhs name\="com.spss.departmentservice.entity.Department"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Enum"><rhs name\="org.springframework.http.HttpStatus"/><rhs name\="javax.persistence.GenerationType"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="org.springframework.http.HttpStatus"/><rhs name\="javax.persistence.GenerationType"/></lhs><lhs name\="com.statcraft.connection.entity.ConnectionEntity"><rhs name\="com.statcraft.connection.entity.ConnectionEntity"/></lhs><lhs name\="org.springframework.http.HttpEntity"><rhs name\="org.springframework.http.ResponseEntity"/></lhs><lhs name\="org.springframework.http.ResponseEntity"><rhs name\="org.springframework.http.ResponseEntity"/></lhs><lhs name\="com.fasterxml.jackson.databind.JsonSerializable"><rhs name\="com.fasterxml.jackson.databind.util.JSONPObject"/></lhs><lhs name\="com.fasterxml.jackson.databind.util.JSONPObject"><rhs name\="com.fasterxml.jackson.databind.util.JSONPObject"/></lhs><lhs name\="com.zaxxer.hikari.HikariConfigMXBean"><rhs name\="com.zaxxer.hikari.HikariConfig"/></lhs><lhs name\="com.zaxxer.hikari.HikariConfig"><rhs name\="com.zaxxer.hikari.HikariConfig"/></lhs><lhs name\="com.example.db.entities.BottelEntity"><rhs name\="com.example.db.entities.BottelEntity"/></lhs><lhs name\="com.example.db.entities.ChairsEntity"><rhs name\="com.example.db.entities.ChairsEntity"/></lhs><lhs name\="org.apache.log4j.Category"><rhs name\="org.apache.log4j.Logger"/></lhs><lhs name\="org.apache.log4j.spi.AppenderAttachable"><rhs name\="org.apache.log4j.Logger"/></lhs><lhs name\="org.apache.log4j.Logger"><rhs name\="org.apache.log4j.Logger"/></lhs><lhs name\="com.statcraft.entities.BooksEntity"><rhs name\="com.statcraft.entities.BooksEntity"/></lhs></history>
+content_assist_number_of_computers=20
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=60,60,60
+eclipse.preferences.version=1
+markOccurrences=false
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=21
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

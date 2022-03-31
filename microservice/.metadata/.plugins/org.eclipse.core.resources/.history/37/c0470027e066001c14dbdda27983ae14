@@ -1,0 +1,32 @@
+package com.example.db.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.db.entities.ChairsEntity;
+import com.example.db.repository.ChairRepository;
+
+@RestController
+public class ChairController {
+
+	@Autowired
+	ChairRepository chairRepository;
+
+	String name;
+	Double price;
+
+	@PostMapping("saveChair")
+	public String saveChairByNumber(@PathVariable Integer number) {
+		ChairsEntity chairsEntity = null;
+		int i = 1;
+		while (1 <= number) {
+			chairsEntity = new ChairsEntity(i, name, price);
+			chairRepository.save(chairsEntity);
+			i++;
+		}
+		return "saved records --" + chairsEntity;
+	}
+
+}

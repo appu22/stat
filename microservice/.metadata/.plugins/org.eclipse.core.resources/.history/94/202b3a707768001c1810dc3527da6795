@@ -1,0 +1,9 @@
+package com.statcraft.repo;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.example.db.entities.FanEntity;
+
+public interface FanRepository extends CrudRepository<FanEntity, Integer> {
+
+}

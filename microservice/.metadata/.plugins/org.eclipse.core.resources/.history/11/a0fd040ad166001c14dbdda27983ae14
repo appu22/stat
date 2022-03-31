@@ -1,0 +1,9 @@
+package com.example.db.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.example.db.entities2.FanEntity;
+
+public interface FanRepository extends CrudRepository<FanEntity, Integer> {
+
+}

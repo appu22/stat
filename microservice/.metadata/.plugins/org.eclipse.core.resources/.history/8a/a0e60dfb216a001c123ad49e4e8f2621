@@ -1,0 +1,31 @@
+log4j.rootLogger = Trace, FILE, console
+#
+## Define the file appender
+log4j.appender.FILE=org.apache.log4j.FileAppender
+log4j.appender.FILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.FILE.file=/home/test2/Downloads/microservice3/bookLogger/booklogger.xlsx
+log4j.appender.FILE.layout.ConversionPattern=%d{yyyy-MM-dd}-%t-%x-%-5p-%-10c:%m%n
+
+using Console
+log4j.appender.console=org.apache.log4j.ConsoleAppender
+log4j.appender.console.layout=org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern=%d{dd/MM/yyyy HH:mm:ss} => [%10p] %M = %m %c{2} %n
+
+#
+#log4j.appender.console=org.apache.log4j.ConsoleAppender
+#log4j.appender.console.layout=org.apache.log4j.PatternLayout
+#log4j.appender.console.layout.ConversionPattern={HH:mm:ss MM/yyyy} => [%p%20] %M = %m %c %n
+#log4j.appender.console.layout.ConversionPattern=%d{yyyy-MM-dd}-%t-10c:%m%n
+
+
+#
+#When you use @SpringBootApplication annotation in for example package
+#
+#com.company.config
+#
+#it will automatically make component scan like this:
+#
+#@ComponentScan("com.company.config") 
+#So it will NOT scan packages like com.company.controller etc.. 
+#Thats why you have to declare your @SpringBootApplication in package one level prior
+# to your normal packages like this: com.company OR use scanBasePackages property, like this:

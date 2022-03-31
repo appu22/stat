@@ -1,0 +1,6 @@
+
+server.port=9051
+spring.application.name=booksStall
+
+
+

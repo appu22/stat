@@ -1,0 +1,66 @@
+package com.example.controller;
+
+import org.apache.log4j.Logger;
+
+public class Heartless {
+
+	int id;
+	String bloodGroup;
+	String bloodColor;
+	int fat;
+
+	private static Logger logger;
+
+	public Heartless() {
+		logger = Logger.getLogger(getClass());
+		logger.info("Hi");
+		System.out.println("Fake People");
+	}
+
+	public Heartless(int id, String bloodGroup, String bloodColor, int fat) {
+		logger.info("Monkey");
+		this.id = id;
+		this.bloodGroup = bloodGroup;
+		this.bloodColor = bloodColor;
+		this.fat = fat;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getBloodGroup() {
+		return bloodGroup;
+	}
+
+	public void setBloodGroup(String bloodGroup) {
+		this.bloodGroup = bloodGroup;
+	}
+
+	public String getBloodColor() {
+		return bloodColor;
+	}
+
+	public void setBloodColor(String bloodColor) {
+		this.bloodColor = bloodColor;
+	}
+
+	public int getFat() {
+		return fat;
+	}
+
+	public void setFat(int fat) {
+		this.fat = fat;
+	}
+
+	@Override
+	public String toString() {
+		return "Heartless [id=" + id + ", bloodGroup=" + bloodGroup + ", bloodColor=" + bloodColor + ", fat=" + fat
+				+ "]";
+	}
+
+}

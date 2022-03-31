@@ -1,0 +1,30 @@
+package com.example.db.controller2;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.db.entities2.FanEnitiy;
+import com.example.db.repository.FanRepository;
+
+@RestController
+public class FanController {
+
+	@Autowired
+	FanRepository repo;
+
+	@GetMapping("test")
+	public String test() {
+		System.out.println("tested");
+		return "tested...";
+	}
+
+	@PostMapping("save")
+	public String save(@RequestBody FanEnitiy enitiy) {
+		System.out.println("save");
+		repo.save(enitiy);
+		return "saved...";
+	}
+}

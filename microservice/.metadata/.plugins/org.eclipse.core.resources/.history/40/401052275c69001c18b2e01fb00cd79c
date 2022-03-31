@@ -1,0 +1,62 @@
+package com.statcraft.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.apache.log4j.Logger;
+
+@Entity
+public class BooksEntity {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
+
+	private String name;
+	private String author;
+
+	Logger logger = Logger.getLogger(getClass());
+
+	public BooksEntity() {
+		logger.info("inside booksentity");
+	}
+
+	public BooksEntity(Integer id, String name, String author) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.author = author;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	@Override
+	public String toString() {
+		return "BooksEntity [id=" + id + ", name=" + name + ", author=" + author + "]";
+	}
+
+}

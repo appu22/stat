@@ -1,0 +1,5 @@
+package com.statcraft.controller;
+
+public class HomeController {
+
+}

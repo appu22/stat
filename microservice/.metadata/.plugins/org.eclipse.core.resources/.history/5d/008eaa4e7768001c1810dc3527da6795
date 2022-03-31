@@ -1,0 +1,9 @@
+package com.statcraft.repo;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.example.db.entities.BottelEntity;
+
+public interface BottelRepository extends CrudRepository<BottelEntity, Integer> {
+
+}

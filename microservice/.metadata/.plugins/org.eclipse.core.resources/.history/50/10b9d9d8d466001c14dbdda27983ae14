@@ -1,0 +1,66 @@
+package com.example.db.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.db.entities.AllFan;
+import com.example.db.entities.FanEntity;
+import com.example.db.repository.FanRepository;
+
+@RestController
+public class FanController {
+
+	@Autowired
+	FanRepository repo;
+
+	@Autowired
+	AllFan fan;
+
+	public String name = "Usha";
+	public double price = 1500.00;
+
+	@GetMapping("test")
+	public String test() {
+		System.out.println("tested");
+		return "tested...";
+	}
+
+	@PostMapping("savefanentity")
+	public String save(@RequestBody FanEntity enitiy) {
+		System.out.println("save");
+		repo.save(enitiy);
+		return "saved...";
+	}
+
+	@PostMapping("fanSave")
+	public String saveAll(@PathVariable Integer number) {
+		FanEntity entity;
+		for (int i = 1; i < number; i++) {
+			entity = new FanEntity(i, name, price);
+			repo.save(entity);
+		}
+		return entity;
+	}
+
+	@PostMapping("saveAllfanentity")
+	public List<FanEntity> saveAll(@RequestBody AllFan allEnitiy) {
+		System.out.println("save all");
+		Iterable<FanEntity> saveAll = repo.saveAll(fan.getFans());
+
+		return (List<FanEntity>) saveAll;
+	}
+
+	@RequestMapping("getAll")
+	public List<FanEntity> getAll() {
+		Iterable<FanEntity> findAll = repo.findAll();
+		return (List<FanEntity>) findAll;
+	}
+
+}

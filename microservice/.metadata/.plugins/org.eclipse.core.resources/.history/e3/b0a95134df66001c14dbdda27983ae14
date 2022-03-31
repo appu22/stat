@@ -1,0 +1,11 @@
+package com.example.db.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ChairController {
+
+	
+	
+	
+}

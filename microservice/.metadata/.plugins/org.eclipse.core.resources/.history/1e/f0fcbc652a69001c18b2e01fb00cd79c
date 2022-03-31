@@ -1,0 +1,8 @@
+package com.example.controller;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface HeartlessRepo {
+
+}

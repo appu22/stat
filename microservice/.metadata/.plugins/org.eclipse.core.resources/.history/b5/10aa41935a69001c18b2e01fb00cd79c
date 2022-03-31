@@ -1,0 +1,13 @@
+package com.statcraft.booksStall;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class BooksStallApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BooksStallApplication.class, args);
+	}
+
+}

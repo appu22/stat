@@ -1,0 +1,18 @@
+package com.example.db.entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AllFan {
+
+	List<FanEntity> fans = new ArrayList<FanEntity>();
+
+	public List<FanEntity> getFans() {
+		return fans;
+	}
+
+	public void setFans(List<FanEntity> fans) {
+		this.fans = fans;
+	}
+
+}

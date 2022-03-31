@@ -1,0 +1,17 @@
+package com.example.db.controller2;
+
+import javax.ws.rs.GET;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class FanController {
+
+	@GetMapping()
+	public String test() {
+		System.out.println("tested");
+		return "tested...";
+	}
+
+}

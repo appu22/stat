@@ -1,0 +1,65 @@
+package com.example.controller;
+
+import org.apache.log4j.Logger;
+
+public class Pepole {
+
+	int id;
+	String bloodGroup;
+	String bloodColor;
+	boolean isFat;
+
+	private static Logger logger;
+
+	public Pepole() {
+		logger = Logger.getLogger(getClass());
+		logger.info("Hi");
+		System.out.println("Fake People");
+	}
+
+	public Pepole(int id, String bloodGroup, String bloodColor, boolean isFat) {
+		logger.info("Monkey");
+		this.id = id;
+		this.bloodGroup = bloodGroup;
+		this.bloodColor = bloodColor;
+		this.isFat = isFat;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getBloodGroup() {
+		return bloodGroup;
+	}
+
+	public void setBloodGroup(String bloodGroup) {
+		this.bloodGroup = bloodGroup;
+	}
+
+	public String getBloodColor() {
+		return bloodColor;
+	}
+
+	public void setBloodColor(String bloodColor) {
+		this.bloodColor = bloodColor;
+	}
+
+	public boolean getisFat() {
+		return isFat;
+	}
+
+	public void setisFat(boolean isFat) {
+		this.isFat = isFat;
+	}
+
+	@Override
+	public String toString() {
+		return "Pepole [id=" + id + ", bloodGroup=" + bloodGroup + ", bloodColor=" + bloodColor + ", isFat=" + isFat+ "]";
+	}
+
+}

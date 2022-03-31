@@ -1,0 +1,10 @@
+package com.example.controller;
+
+public class Heartless {
+
+	int id;
+	String bloodGroup;
+	String bloodColor;
+	int fat;
+	
+}

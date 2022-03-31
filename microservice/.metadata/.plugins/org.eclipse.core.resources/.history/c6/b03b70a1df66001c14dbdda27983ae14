@@ -1,0 +1,23 @@
+package com.example.db.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.db.repository.ChairRepository;
+
+@RestController
+public class ChairController {
+
+	@Autowired
+	ChairRepository chairRepository;
+
+	@PostMapping("saveChair")
+
+	public String saveChairByNumber(@PathVariable Integer number) {
+
+		return "saved records --";
+	}
+
+}

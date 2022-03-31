@@ -1,0 +1,17 @@
+log4j.rootLogger = Trace, FILE, console
+
+# Define the file appender
+log4j.appender.FILE=org.apache.log4j.FileAppender
+log4j.appender.FILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.FILE.file=/home/test2/Downloads/springboot/demo2/loggers/People4j.log
+log4j.appender.FILE.layout.ConversionPattern=%d{yyyy-MM-dd}-%t-%x-%-5p-%-10c:%m%n
+
+#using Console
+#log4j.appender.console=org.apache.log4j.ConsoleAppender
+#log4j.appender.console.layout=org.apache.log4j.PatternLayout
+#log4j.appender.console.layout.ConversionPattern=%d{dd/MM/yyyy HH:mm:ss} => [%10p] %M = %m %c{2} %n
+
+
+log4j.appender.console=org.apache.log4j.ConsoleAppender
+log4j.appender.console.layout=org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern=%d{ HH:mm:ss MM/yyyy} => [%20p] %M = %m %c %n

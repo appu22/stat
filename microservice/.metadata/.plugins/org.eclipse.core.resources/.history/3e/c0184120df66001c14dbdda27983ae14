@@ -1,0 +1,9 @@
+package com.example.db.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.example.db.entities.ChairsEntity;
+
+public interface ChairRepository extends CrudRepository<ChairsEntity, ID> {
+
+}

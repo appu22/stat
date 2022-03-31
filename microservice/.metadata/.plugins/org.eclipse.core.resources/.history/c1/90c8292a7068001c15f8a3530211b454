@@ -1,0 +1,25 @@
+package com.statcraft.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+@RestController
+public class HomeController {
+
+	Logger logger = LoggerFactory.getLogger(HomeController.class);
+
+	@RequestMapping("/home")
+	public String home() {
+		logger.error("error happed");
+		return "Logger using...";
+	}
+	@RequestMapping("/home")
+	public String test() {
+		logger.error("error happed");
+		return "Logger using...";
+	}
+
+}

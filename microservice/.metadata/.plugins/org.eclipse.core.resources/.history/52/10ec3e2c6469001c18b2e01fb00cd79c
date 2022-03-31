@@ -1,0 +1,53 @@
+package com.statcraft.controller;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.statcraft.entities.BooksEntity;
+import com.statcraft.repository.BooksRepo;
+
+@RestController
+public class BooksController {
+
+	@Autowired
+	BooksRepo booksRepo;
+
+	Logger logger = Logger.getLogger(getClass());
+
+	String name = "Java";
+	String author = "James Gosling";
+
+//	@PostMapping("/save/{number}")
+//	public String save(@PathVariable Integer number) {
+//		System.out.println("inside save method");
+//		BooksEntity booksEntity;
+//
+//		logger.info("inside save method" + " The given number is : " + number);
+////		String msg = null;
+//		if (number.equals(0)) {
+//			System.out.println("===============");
+//			for (int i = 0; i < number; i++) {
+//				booksEntity = new BooksEntity(i, name, author);
+//				booksRepo.save(booksEntity);
+//				logger.info("Books data  saved");
+////				msg = "successfull ";
+//			}
+//			return "successfull";
+//		} else {
+//			logger.error("Please try again");
+//			logger.error("the given number is null");
+////			msg = "Please try again";
+//			return "the given number is null";
+//		}
+//	}
+	@RequestMapping("/")
+	public String get() {
+		logger.info("Informaion");
+		return "Logger Success";
+		
+	}
+}

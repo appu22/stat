@@ -1,0 +1,30 @@
+package com.example.db.controller;
+
+import javax.ws.rs.Path;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.db.entities.BottelEntity;
+import com.example.db.repository.BottelRepository;
+
+@RestController
+public class BottelController {
+
+	@Autowired
+	BottelRepository bottelRepository;
+
+	String name = "Copper";
+	Double price = 299.0;
+
+	public String saveByNumber(@PathVariable Integer number) {
+
+		BottelEntity bottelEntity = null;
+		do {
+
+		} while (1 <= number);
+
+		return "";
+	}
+}

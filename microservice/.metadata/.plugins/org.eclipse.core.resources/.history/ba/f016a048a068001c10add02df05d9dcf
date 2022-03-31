@@ -1,0 +1,21 @@
+package com.example.controller;
+
+import org.apache.logging.log4j.Logger;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.apache.log4j.Logger;
+@RestController
+public class HeartlessController {
+
+	private static Logger logger;
+
+	@PostMapping("/string/{str}")
+	public String save(@PathVariable String str) {
+		logger=Logger.getLoggers(getClass());
+		logger.info("Gube");
+		System.out.println("FAKEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+		return str;
+
+	}
+}

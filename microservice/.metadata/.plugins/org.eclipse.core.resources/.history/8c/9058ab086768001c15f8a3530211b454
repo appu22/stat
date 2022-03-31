@@ -1,0 +1,44 @@
+package com.example.db.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.db.entities.BottelEntity;
+import com.example.db.repository.BottelRepository;
+
+@RestController
+public class BottelController {
+
+	@Autowired
+	BottelRepository bottelRepository;
+
+	String name = "Copper";
+	Double price = 299.0;
+
+	@PostMapping("savebottel/{number}")
+	public String saveByNumber(@PathVariable Integer number) {
+	
+		System.out.println("inside saveByNumber");
+		BottelEntity bottelEntity;
+		int i = 1;
+		do {
+			bottelEntity = new BottelEntity(i, name, price);
+			bottelRepository.save(bottelEntity);
+			i++;
+		} while (i <= number);
+
+		return "bottel data saved ..." + bottelEntity;
+	}
+
+	@GetMapping("getbottels")
+	public List<BottelEntity> getBottels() {
+		Iterable<BottelEntity> saveAll = bottelRepository.findAll();
+		return (List<BottelEntity>) saveAll;
+	}
+
+}

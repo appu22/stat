@@ -1,0 +1,5 @@
+package com.statcraft.entities;
+
+public class BooksEntity {
+
+}

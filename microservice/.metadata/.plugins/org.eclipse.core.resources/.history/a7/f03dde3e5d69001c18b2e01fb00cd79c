@@ -1,0 +1,28 @@
+package com.statcraft.controller;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.statcraft.repository.BooksRepo;
+
+@RestController
+public class BooksController {
+
+	@Autowired
+	BooksRepo booksRepo;
+
+	Logger logger = Logger.getLogger(getClass());
+
+	public BooksController() {
+
+	}
+
+	@RequestMapping("/")
+	public String test(@PathVariable Integer number) {
+
+		return "";
+	}
+}

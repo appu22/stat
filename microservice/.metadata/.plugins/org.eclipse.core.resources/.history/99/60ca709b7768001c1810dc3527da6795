@@ -1,0 +1,136 @@
+package com.statcraft.controller;
+
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.db.entities.AllPersons;
+import com.example.db.entities.Person;
+import com.example.db.repository.PersonRepository;
+
+@RestController
+public class PersonController {
+
+	@Autowired
+	private PersonRepository personRepository;
+
+	public String name = "appu";
+	public Integer age = 25;
+	public String email = "a@gmail.com";
+
+	@PostMapping(value = "/save/{number}")
+	public String saveByNumber(@PathVariable Integer number) throws SQLException {
+		Person person = new Person();
+//		person.setName(name);
+//		person.setEmail(email);
+//		person.setAge(age);
+		System.out.println("inside method");
+
+//		Integer n = number;
+		for (int i = 1; i <= number; i++) {
+			person = new Person(i, name, age, email);
+			personRepository.save(person);
+		}
+		return person.getName() + " : " + person.getId();
+
+	}
+
+	@PostMapping(value = "/save")
+	public Person save(@RequestBody Person person) throws SQLException {
+
+		System.out.println("inside method");
+
+		personRepository.save(person);
+		return person;
+	}
+
+	@PostMapping("/saveAll")
+	public String saveAll(@RequestBody AllPersons persons) {
+		personRepository.saveAll(persons.getPersons());
+		return "All records Stored Successfully";
+	}
+
+	@GetMapping("findById/{id}")
+	public String findById(@PathVariable("id") Integer id) throws SQLException {
+
+		Optional<Person> findById = personRepository.findById(id);
+		return "somthing,,text here..";
+	}
+
+	@GetMapping("findAll")
+	public List<Person> findAll() throws SQLException {
+
+		Iterable<Person> findAll = personRepository.findAll();
+		for (Person person2 : findAll) {
+//			System.out.println("+ + +  " + person2);
+
+		}
+		return (List<Person>) personRepository.findAll();
+
+	}
+//	public ResponseEntity<List<Person>> getall() {
+//		System.out.println("Inside getall()");
+//		List<Person> findAll = (List<Person>) personRepository.findAll();
+//		System.out.println(findAll);
+//		return new ResponseEntity<List<Student>>(findAll, HttpStatus.OK);
+//	}
+
+	@GetMapping(value = "/viewAll")
+	public List<Person> viewAll() {
+
+		return (List<Person>) personRepository.findAll();
+	}
+
+	@GetMapping("view/{id}")
+	public ResponseEntity<String> view(@PathVariable Integer id) {
+		System.out.println("inside view method ");
+		Optional<Person> findById = personRepository.findById(id);
+		System.out.println(findById.toString());
+		return new ResponseEntity<String>(findById.toString(), HttpStatus.BAD_REQUEST);
+	}
+
+//	@RequestMapping(value = "detele", method = RequestMethod.DELETE)
+	@DeleteMapping("deleteById/{id}")
+	public String deleteById(@PathVariable Integer id) {
+
+//		personRepository.deleteById(id);
+		personRepository.deleteAll();
+
+//		System.out.println("findById --> " + findById);
+
+//		findById.filter(p->p.get)
+//		System.out.println("filter --> " + filter);
+//		Person person = new Person();
+//		person.
+		System.out.println(id);
+//		Optional<Person> filter = findById.filter(p -> p.getId().equals(id));
+//		System.out.println(filter + " -- filter");
+		return "deleted successfull..";
+//		if (id.equals(null)) {
+//
+//			return "Incorrect Id .";
+//
+//		} else {
+//
+//			personRepository.deleteById(id);
+//			return "deleted Successfull..";
+//		}
+	}
+
+	@DeleteMapping("deleteAll")
+	public String deleteAll() {
+		personRepository.deleteAll();
+		return "deleted successfull..";
+
+	}
+}

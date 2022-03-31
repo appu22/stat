@@ -1,0 +1,9 @@
+package com.statcraft.repo;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.example.db.entities.ChairsEntity;
+
+public interface ChairRepository extends CrudRepository<ChairsEntity, Integer> {
+
+}

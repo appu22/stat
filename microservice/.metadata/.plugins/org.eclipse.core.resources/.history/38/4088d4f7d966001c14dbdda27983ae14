@@ -1,0 +1,10 @@
+package com.example.db.entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AllBottel {
+
+	private List<BottelEntity> bottel = new ArrayList<BottelEntity>();
+
+}

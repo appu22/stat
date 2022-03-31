@@ -1,0 +1,21 @@
+package com.example.db.controller2;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class FanController {
+
+	@GetMapping("test")
+	public String test() {
+		System.out.println("tested");
+		return "tested...";
+	}
+
+	@PostMapping("save")
+	public String save() {
+		System.out.println("save");
+		return "saved...";
+	}
+}

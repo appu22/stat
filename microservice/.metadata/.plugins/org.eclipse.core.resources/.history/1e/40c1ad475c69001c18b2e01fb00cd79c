@@ -1,0 +1,5 @@
+package com.statcraft.repository;
+
+public class BooksRepo {
+
+}

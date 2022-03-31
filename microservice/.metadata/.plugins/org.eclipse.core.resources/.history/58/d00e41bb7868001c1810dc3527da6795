@@ -1,0 +1,17 @@
+
+spring.application.name=db
+server.port=9020
+## PostgreSQL
+spring.datasource.url = jdbc:postgresql://localhost:5432/connection
+spring.datasource.username = postgres
+spring.datasource.password = spss123
+
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create
+
+spring.datasource.hikari.minimumIdle=1
+spring.datasource.hikari.idleTimeout=10000
+spring.datasource.hikari.maximum-pool-size=2
+spring.datasource.hikari.default-auto-commit = true  
+ 
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
